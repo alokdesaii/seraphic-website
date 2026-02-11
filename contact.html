@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Nova Free Bootstrap Template for Agency — by FreeBootstrap.net </title>
+
+  <!-- ======= Favico =======-->
+  <link rel="icon" href="images/favico.ico">
+  <!-- End Fav Ico -->
+
+  <!-- ======= Google Font =======-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <!-- End Google Font-->
+
+  <!-- ======= Styles =======-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/glightbox.min.css" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="css/aos.css" rel="stylesheet">
+  <!-- End Styles-->
+
+  <!-- ======= Theme Style =======-->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- End Theme Style-->
+
+  <!-- ======= Apply theme =======-->
+  <script>
+    // Apply the theme as early as possible to avoid flicker
+    (function () {
+      const storedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-bs-theme', storedTheme);
+    })();
+  </script>
+
+  <!-- ======= Google Analytics ======= -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CN09X6ELXM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-CN09X6ELXM');
+  </script>
+  <!-- End Google Analytics -->
+</head>
+
+<body>
+
+
+  <!-- ======= Site Wrap =======-->
+  <div class="site-wrap">
+
+
+    <!-- ======= Header =======-->
+    <header class="fbs__net-navbar navbar navbar-expand-lg relative dark" aria-label="navbar">
+      <div class="container d-flex align-items-center justify-content-between">
+
+
+        <!-- Start Logo-->
+        <a class="navbar-brand w-auto" href="index.html">
+          <!-- If you use a text logo, uncomment this if it is commented-->
+          <!-- Vertex-->
+
+          <!-- If you plan to use an image logo, uncomment this if it is commented-->
+          <img class="logo dark img-fluid" src="images/logo-dark.svg" alt="image placeholder">
+          <img class="logo light img-fluid" src="images/logo-light.svg" alt="image placeholder">
+
+        </a>
+        <!-- End Logo-->
+
+        <!-- Start offcanvas-->
+        <div class="offcanvas offcanvas-start w-75" id="fbs__net-navbars" tabindex="-1"
+          aria-labelledby="fbs__net-navbarsLabel">
+
+
+          <div class="offcanvas-header">
+            <div class="offcanvas-header-logo">
+              <!-- If you use a text logo, uncomment this if it is commented-->
+
+              <!-- h5#fbs__net-navbarsLabel.offcanvas-title Vertex-->
+
+              <!-- If you plan to use an image logo, uncomment this if it is commented-->
+              <a class="logo-link" id="fbs__net-navbarsLabel" href="index.html">
+
+
+                <!-- logo dark--><img class="logo dark img-fluid" src="images/logo-dark.svg" alt="image placeholder">
+
+                <!-- logo light--><img class="logo light img-fluid" src="images/logo-light.svg"
+                  alt="image placeholder"></a>
+
+            </div>
+            <button class="btn-close btn-close-black" type="button" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body align-items-lg-center">
+
+
+            <ul class="navbar-nav nav me-auto ps-lg-5 mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link scroll-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item"><a class="nav-link scroll-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link scroll-link" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link scroll-link" href="contact.html">Contact </a></li>
+            </ul>
+
+          </div>
+        </div>
+        <!-- End offcanvas-->
+
+        <div class="ms-auto w-auto">
+
+
+          <div class="header-social d-flex align-items-center gap-1"><a class="btn btn-primary py-2"
+              href="contact.html">Open Account</a>
+
+
+            <!-- Toggle Button Dark and Light Mode-->
+            <a id="themeToggleBtn" href="#"><i class="bi" id="themeIcon"></i></a>
+
+            <button class="fbs__net-navbar-toggler justify-content-center align-items-center ms-auto"
+              data-bs-toggle="offcanvas" data-bs-target="#fbs__net-navbars" aria-controls="fbs__net-navbars"
+              aria-label="Toggle navigation" aria-expanded="false">
+              <svg class="fbs__net-icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="21" x2="3" y1="6" y2="6"></line>
+                <line x1="15" x2="3" y1="12" y2="12"></line>
+                <line x1="17" x2="3" y1="18" y2="18"></line>
+              </svg>
+              <svg class="fbs__net-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <!-- End Header-->
+
+    <!-- ======= Main =======-->
+    <main>
+      <!-- ======= Contact =======-->
+      <section class="section contact__v2 first-section" id="contact">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-6 col-lg-7 mx-auto text-center"><span class="subtitle text-uppercase mb-3"
+                data-aos="fade-up" data-aos-delay="0">Contact</span>
+              <h2 class="h2 fw-bold mb-3" data-aos="fade-up" data-aos-delay="0">Contact Us</h2>
+              <p data-aos="fade-up" data-aos-delay="100">Let’s discuss your global business needs.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="d-flex gap-5 flex-column">
+                <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="0">
+                  <div class="icon d-block"><i class="bi bi-telephone"></i></div><span> <span
+                      class="d-block">Phone</span><strong>+852 3580 1722</strong></span>
+                </div>
+                <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="100">
+                  <div class="icon d-block"><i class="bi bi-send"></i></div><span> <span
+                      class="d-block">Email</span><strong>business.development@seraphichk.com</strong></span>
+                </div>
+                <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="200">
+                  <div class="icon d-block"><i class="bi bi-geo-alt"></i></div><span> <span
+                      class="d-block">Address</span>
+                    <address class="fw-bold">Flat/RM 07, 17/F, Tower 3, China Hong Kong City,<br> China Ferry Terminal,
+                      33 Canton Road, Tsim Sha Tsui, Kowloon.</address>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-wrapper" data-aos="fade-up" data-aos-delay="300">
+                <form id="contactForm" action="send_email.php" method="POST">
+                  <div class="row gap-3 mb-3">
+                    <div class="col-md-12">
+                      <label class="mb-2" for="name">Name</label>
+                      <input class="form-control" id="name" type="text" name="name" required="">
+                    </div>
+                    <div class="col-md-12">
+                      <label class="mb-2" for="email">Email</label>
+                      <input class="form-control" id="email" type="email" name="email" required="">
+                    </div>
+                  </div>
+                  <div class="row gap-3 mb-3">
+                    <div class="col-md-12">
+                      <label class="mb-2" for="subject">Subject</label>
+                      <input class="form-control" id="subject" type="text" name="subject">
+                    </div>
+                  </div>
+                  <div class="row gap-3 gap-md-0 mb-3">
+                    <div class="col-md-12">
+                      <label class="mb-2" for="message">Message</label>
+                      <textarea class="form-control" id="message" name="message" rows="5" required=""></textarea>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary fw-semibold" type="submit">Send Message</button>
+                </form>
+                <div class="mt-3 d-none alert alert-success" id="successMessage">Message sent successfully!</div>
+                <div class="mt-3 d-none alert alert-danger" id="errorMessage">Message sending failed. Please try again
+                  later.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact-->
+    </main>
+    <!-- End Main -->
+
+    <!-- ======= Footer =======-->
+    <footer class="footer pt-5 pb-5">
+      <div class="container">
+        <div class="row justify-content-between mb-5 g-xl-5">
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h3 class="mb-3">About</h3>
+            <p class="mb-4">Seraphic simplifies global finance for modern enterprises. We provide secure, instant
+              cross-border payments to help your business grow without borders.</p>
+          </div>
+          <div class="col-md-7">
+            <div class="row g-2">
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                <h3 class="mb-3">Company</h3>
+                <ul class="list-unstyled">
+                  <li><a href="tnc.html">Terms & Conditions</a></li>
+                  <li><a href="pp.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+                <h3 class="mb-3">Accounts</h3>
+                <ul class="list-unstyled">
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-0 quick-contact">
+                <h3 class="mb-3">Contact</h3>
+                <p class="d-flex mb-3"><i class="bi bi-geo-alt-fill me-3"></i><span>Flat/RM 07, 17/F, Tower 3, China
+                    Hong Kong City, China Ferry Terminal, 33 Canton Road, Tsim Sha Tsui, Kowloon.</span></p><a
+                  class="d-flex mb-3" href="mailto:business.development@seraphichk.com"><i
+                    class="bi bi-envelope-fill me-3"></i><span>business.development@seraphichk.com</span></a><a
+                  class="d-flex mb-3" href="tel://+85235801722"><i class="bi bi-telephone-fill me-3"></i><span>+852 3580
+                    1722</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row credits pt-3">
+          <div class="col-xl-8 text-center text-xl-start mb-3 mb-xl-0">
+            ©
+            <script>document.write(new Date().getFullYear());</script> Seraphic Limited.
+            All rights reserved.
+          </div>
+          <div
+            class="col-xl-4 justify-content-start justify-content-xl-end quick-links d-flex flex-column flex-xl-row text-center text-xl-start gap-3">
+            <a href="tnc.html">Terms and Conditions</a><a href="pp.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer-->
+
+  </div>
+
+  <!-- ======= Back to Top =======-->
+  <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
+  <!-- End Back to top-->
+
+  <!-- ======= Javascripts =======-->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/glightbox.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/purecounter.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/send_email.js"></script>
+  <!-- End JavaScripts-->
+
+</body>
+
+</html>
