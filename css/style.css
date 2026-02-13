@@ -1628,6 +1628,10 @@ h6 {
   background-color: rgba(var(--inverse-color-rgb), 0.1);
   color: var(--inverse-color);
 }
+
+#contact h6 {
+  color: var(--bs-primary);
+}
 .contact__v2 .icon {
   width: 50px;
   height: 50px;
