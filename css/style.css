@@ -2670,7 +2670,7 @@ h6 {
 }
 
 .about__v3 {
-  background-color: rgba(var(--inverse-color-rgb), 0.02);
+  /* background-color: rgba(var(--inverse-color-rgb), 0.02); */
 }
 [data-bs-theme=dark] .about__v3 {
   background-color: rgba(var(--inverse-color-rgb), 0.05);
@@ -2681,7 +2681,7 @@ h6 {
   height: 60px;
   line-height: 60px;
   margin-bottom: 30px;
-  background-color: rgba(var(--bs-white-rgb), 1);
+  background-color: rgba(var(--inverse-color-rgb), 0.02);
   border: 1px solid rgba(var(--inverse-color-rgb), 0.1);
   color: var(--bs-primary);
 }
