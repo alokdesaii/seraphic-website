@@ -76,7 +76,7 @@ $clean_name = filter_var($name, FILTER_SANITIZE_STRING);
 $clean_subject = filter_var($subject, FILTER_SANITIZE_STRING);
 $clean_message = filter_var($message, FILTER_SANITIZE_STRING);
 
-$to = 'business.development@seraphichk.com';
+$to = 'alokdesai.in@gmail.com';
 $from = 'enquiry@seraphichk.com';
 
 $body = "You have a new message from your website contact form:\n\n";
