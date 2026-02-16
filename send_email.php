@@ -1,8 +1,56 @@
 <?php
-// Simple mail handler for the contact form
+// Simple mail handler for the contact form with Google reCAPTCHA v3
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo 'Method Not Allowed';
+    exit;
+}
+
+// Your reCAPTCHA Secret Key
+$recaptcha_secret = 'YOUR_SECRET_KEY';
+$recaptcha_token = trim($_POST['recaptcha_token'] ?? '');
+
+// Verify reCAPTCHA token
+if (empty($recaptcha_token)) {
+    http_response_code(400);
+    echo 'reCAPTCHA token missing';
+    exit;
+}
+
+// Verify token with Google
+$recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+$recaptcha_post = [
+    'secret' => $recaptcha_secret,
+    'response' => $recaptcha_token
+];
+
+$options = [
+    'http' => [
+        'method' => 'POST',
+        'header' => 'Content-type: application/x-www-form-urlencoded\r\n',
+        'content' => http_build_query($recaptcha_post),
+        'timeout' => 5
+    ]
+];
+
+$context = stream_context_create($options);
+$response = @file_get_contents($recaptcha_url, false, $context);
+
+if ($response === false) {
+    http_response_code(500);
+    echo 'reCAPTCHA verification failed';
+    exit;
+}
+
+$response_data = json_decode($response, true);
+
+// Check if verification was successful and score is acceptable
+// reCAPTCHA v3 returns a score between 0.0 and 1.0
+// Score closer to 1.0 means more likely human, closer to 0.0 means likely bot
+// Threshold of 0.5 is recommended; adjust as needed
+if (!$response_data['success'] || ($response_data['score'] ?? 0) < 0.5) {
+    http_response_code(400);
+    echo 'reCAPTCHA verification failed (possible bot activity)';
     exit;
 }
 
@@ -37,6 +85,7 @@ $body .= "Email: " . $email . "\n";
 $body .= "Subject: " . $clean_subject . "\n\n";
 $body .= "Message:\n" . $clean_message . "\n\n";
 $body .= "IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
+$body .= "reCAPTCHA Score: " . ($response_data['score'] ?? 'N/A') . "\n";
 
 $headers = "From: Seraphic Website <" . $from . ">\r\n";
 $headers .= "Reply-To: " . $email . "\r\n";
@@ -54,5 +103,4 @@ if (mail($to, $clean_subject, $body, $headers)) {
 
 // Note: If your host restricts PHP mail(), consider using SMTP via PHPMailer
 // or a transactional email service (SendGrid, Mailgun) for reliability.
-
 ?>

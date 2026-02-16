@@ -46,6 +46,10 @@
     gtag('config', 'G-CN09X6ELXM');
   </script>
   <!-- End Google Analytics -->
+
+  <!-- ======= Google reCAPTCHA v3 ======= -->
+  <script src="https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY"></script>
+  <!-- End Google reCAPTCHA v3 -->
 </head>
 
 <body>
@@ -174,11 +178,10 @@
                   <div class="icon d-block"><i class="bi bi-geo-alt"></i></div><span> <span
                       class="d-block">Address</span>
                       <h6 class="fw-bold">Head Office</h6>
-                    <address class="fw-bold">Flat/RM 07, 17/F, Tower 3, China Hong Kong City,<br> China Ferry Terminal,
-                      33 Canton Road, Tsim Sha Tsui, Kowloon.</address>
+                    <address class="fw-bold">Flat 07, 17/F, Tower 3, China Hong Kong City,<br> China Ferry Terminal, 33 Canton Road,<br> Tsim Sha Tsui, Kowloon, Hong Kong.</address>
 
                       <h6 class="fw-bold">Branch Office</h6>
-                    <address class="fw-bold">Unit 324 03/FL Hankow Centre, 5-15 Hankow Road,<br> T.S. T KL Hong Kong</address>
+                    <address class="fw-bold">Unit 324 03/FL Hankow Centre, 5-15 Hankow Road,<br> Tsim Sha Tsui, Kowloon, Hong Kong</address>
                   </span>
                 </div>
               </div>
@@ -208,6 +211,8 @@
                       <textarea class="form-control" id="message" name="message" rows="5" required=""></textarea>
                     </div>
                   </div>
+                  <!-- Hidden field for reCAPTCHA token -->
+                  <input type="hidden" id="recaptchaToken" name="recaptcha_token">
                   <button class="btn btn-primary fw-semibold" type="submit">Send Message</button>
                 </form>
                 <div class="mt-3 d-none alert alert-success" id="successMessage">Message sent successfully!</div>
