@@ -92,8 +92,23 @@ $headers .= "Reply-To: " . $email . "\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
+// Log form submission for debugging
+$log_file = __DIR__ . '/contact_form_log.txt';
+$log_entry = "[" . date('Y-m-d H:i:s') . "] Form submission:\n";
+$log_entry .= "  Name: $clean_name\n";
+$log_entry .= "  Email: $email\n";
+$log_entry .= "  Subject: $clean_subject\n";
+$log_entry .= "  Recipient: $to\n";
+
 // Attempt to send
-if (mail($to, $clean_subject, $body, $headers)) {
+$mail_sent = mail($to, $clean_subject, $body, $headers);
+$log_entry .= "  Mail result: " . ($mail_sent ? 'SUCCESS' : 'FAILED') . "\n";
+$log_entry .= "---\n";
+
+// Write to log file
+error_log($log_entry, 3, $log_file);
+
+if ($mail_sent) {
     http_response_code(200);
     echo 'OK';
 } else {
