@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
 
     // Get reCAPTCHA token
-    grecaptcha.execute('YOUR_SITE_KEY', { action: 'contact_form' }).then(function(token) {
+    grecaptcha.execute('6LflyG0sAAAAAB88XvvkwSwewyLJi7kq3YtiMIvV', { action: 'contact_form' }).then(function(token) {
       // Set the token in the hidden field
       document.getElementById('recaptchaToken').value = token;
 

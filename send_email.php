@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Your reCAPTCHA Secret Key
-$recaptcha_secret = 'YOUR_SECRET_KEY';
+$recaptcha_secret = '6LflyG0sAAAAAA_GAOzDASK3N89iK7FzyYzP5Qh-';
 $recaptcha_token = trim($_POST['recaptcha_token'] ?? '');
 
 // Verify reCAPTCHA token
